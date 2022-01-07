@@ -6,5 +6,7 @@ jobs:
     name: A job to say hello
     steps:
       - uses: actions/checkout@v2
-      - id: foo
-        uses: 2DegreesInvesting/actions/check-file-encodings-in-PR@v4
+      
+      - uses: 2DegreesInvesting/actions/check-file-encodings-in-PR@v5
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
