@@ -1,9 +1,14 @@
 on: [push]
 
 jobs:
-  test_job:
+  hello_world_job:
     runs-on: ubuntu-latest
-    name: A job that uses the 2dii check file encodings in PR GH Action
+    name: A job to say hello
     steps:
       - uses: actions/checkout@v2
-      - uses: 2DegreesInvesting/actions/check_file_encodings_in_PR@v1
+      - id: foo
+        uses: actions/actions@v3
+        with:
+          who-to-greet: 'Mona the Octocat'
+      - run: echo random-number ${{ steps.foo.outputs.random-number }}
+        shell: bash
