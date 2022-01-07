@@ -1,11 +1,14 @@
-on: [push, workflow_dispatch]
-
+name: check file encodings in PR
+on: [pull_request]
 jobs:
-  hello_world_job:
+  file-encoding:
+    name: file encooding check
     runs-on: ubuntu-latest
-    name: A job to say hello
+    timeout-minutes: 5
+
     steps:
-      - uses: actions/checkout@v2
+      - name: run the checkout action
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
       - name: list all files
