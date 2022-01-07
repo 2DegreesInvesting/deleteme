@@ -17,4 +17,4 @@ jobs:
       - name: show changed files
         shell: bash
         run: git diff --name-only origin/$GITHUB_BASE_REF...${{ github.sha }}
-      - uses: 2DegreesInvesting/actions/check-file-encodings-in-PR@v8.3
+      - uses: 2DegreesInvesting/actions/check-file-encodings-in-PR@v8.4
