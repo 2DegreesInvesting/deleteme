@@ -9,4 +9,7 @@ jobs:
       - name: list all files
         shell: bash
         run: ls -al
+      - name: show changed files
+        shell: bash
+        run: git diff --name-only origin/$GITHUB_BASE_REF...${{ github.sha }}
       - uses: 2DegreesInvesting/actions/check-file-encodings-in-PR@v8.3
