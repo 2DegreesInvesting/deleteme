@@ -1,8 +1,9 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  test_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job that uses the 2dii check file encodings in PR GH Action
     steps:
+      - uses: actions/checkout@v2
       - uses: 2DegreesInvesting/actions/check_file_encodings_in_PR@v1
