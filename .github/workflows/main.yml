@@ -1,0 +1,8 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - uses: 2DegreesInvesting/actions/check_file_encodings_in_PR@v1
