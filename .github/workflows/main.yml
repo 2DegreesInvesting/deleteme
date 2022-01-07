@@ -1,5 +1,5 @@
 name: check file encodings in PR
-on: [push]
+on: [pull_request]
 jobs:
   file-encoding:
     name: file encooding check
@@ -11,10 +11,4 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: list all files
-        shell: bash
-        run: ls -al
-      - name: show changed files
-        shell: bash
-        run: git diff --name-only origin/$GITHUB_BASE_REF...${{ github.sha }}
-      - uses: 2DegreesInvesting/actions/check-file-encodings-in-PR@v8.3
+      - uses: 2DegreesInvesting/actions/check-file-encodings-in-PR@v8.4
