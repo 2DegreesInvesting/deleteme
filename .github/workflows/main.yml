@@ -7,6 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - uses: 2DegreesInvesting/actions/check-file-encodings-in-PR@v7
+      - uses: 2DegreesInvesting/actions/check-file-encodings-in-PR@v8
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
